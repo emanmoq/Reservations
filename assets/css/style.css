@@ -136,21 +136,27 @@ overflow-x: hidden;
 .mk_scroller_panel{
     left: auto !important;
     right: 13% !important;
-    bottom:9% !important
+    bottom:9% !important;
+    display: flex;
 }
 .mk_scroller_panel > .mk_scroller_panel-item{
-width:10px;
-height:10px;
-padding:6px;
+    width:16px;
+    height:16px;
+border:0;
 border-radius: 50%;
-background-color:var(--gradiant-color2);
-opacity: .35;
 margin-left:12px;
-border:6px solid rgba(42, 62, 199, .3);
+background-color:rgba(42, 62, 199, .3);
+display: inline-flex;
+align-self: center;
+transition: all .5s;
+
 }
 .mk_scroller_panel > .mk_scroller_panel-item.active{
     background-color:var(--gradiant-color2);
-    opacity: 1;
+ transform: scale(1);
+    padding: 6px;
+    border:6px solid  #CED3F2;
+    transition: all .5s;;
 }
 .call{
     display: inline-block;
@@ -261,6 +267,10 @@ font-size:20px;
     box-shadow: 0 3px 6px rgba(0,0,0, .03);
     border-radius: 10px;
     border:1px solid#D2E2FE;
+    text-align: right;
+}
+.form-control::-webkit-calendar-picker-indicator {
+display: none !important;
 }
 .contactForm .form-control::placeholder{
     font-size: 1.1em;
